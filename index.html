@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cardteados</title>
+        <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <script defer src="productos.json"></script>
+        <script defer src="productos.js"></script>
+        <script defer src="carrito.js"></script>
+        <script defer src="init.js"></script>
+        <script src="app.js"></script>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <img src="./img/logo.jpeg" width="100px" alt="logo">
+                <button id="carrito_btn"><i class="fas fa-shopping-cart"></i><span id="contador">0</span></button>
+            </nav>
+        </header>
+        
+        <main>
+        <div class="container" id="container">
+            <div class="titulo_principal">
+                <h1>CARDTEADOS</h1>
+            </div>
+            <div>
+                <p class="main_text">Pagina de ventas de cartas intercambiables colecionables de pokemon</p>
+            </div>
+            <div id="productos_div" class="productos_container">
+            </div>
+        </main>
+
+        <div class="container" id="container">
+            <div class="container_modal">
+                <div class="carrito_modal">
+                    <h2>Cartas</h2>
+                    <button id="carrito_cerrar"><i class="fas fa-times-circle"></i></button>
+                    <div id="container_carrito">
+                </div>
+                    
+                <div class="modal_btn_div">
+                    <p class="precio_p">Precio total: $<span id="total">0</span></p>    
+                    <button id="comprar" class="comprar_btn">COMPRAR</button>
+                    <p class="">Una vez finalizada la compra, se el pedido se despachara dentro de las 48hs<span id="total"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <footer>
+        <div class="footer_text">
+            <h4>Dhers Gaston</h4>
+            <p>Comisión JavaScript 34095</p>
+        </div>
+    </footer>
+</html>

@@ -1,0 +1,433 @@
+html {
+    display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(201, 172, 98);    
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 25vh;
+    background-color: #c9600f;
+    opacity: 80%;
+
+}
+
+header nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 200px;
+}
+
+.container_class {
+    width: 85%;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    column-gap: 20px;
+    flex-wrap: wrap;
+
+}
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.main_text{
+    font-size: 20px;
+}
+
+h1 {
+    color: #ff2f00;
+    font-weight: 400;
+    font-size: 40px;
+    font-family: sans-serif;
+}
+
+.sub_titulo {
+    display: flex;
+    align-items: center;
+    color: #dfdac9;
+    font-weight: 200;
+    font-size: 20px;
+    font-family: serif;
+}
+
+.titulo_principal {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+    background-color: #193d60;
+    text-align: center;
+}
+.titulo_principal h2 {
+    font-size: 35px;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    color: #2E4053 ;
+    padding: 10px;
+}
+
+#carrito_btn {
+    border: groove;
+    border-color: #000000;
+    color: rgb(251, 251, 251);
+    font-size: 40px;
+    background-color: #ff2a00;
+    border-radius: 5%;
+    padding: 10px 20px;
+    transition: all .3s;
+}
+#carrito_btn:hover {
+    cursor: pointer;
+    color: black;
+    background-color: rgb(255, 255, 255);;
+}
+
+p {
+    line-height: 1.8;
+}
+
+.producto {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 16px;
+    width: calc(33% - 20px);
+    height: 450px;
+    background-color:#53565a;
+    color:white;
+    margin-top: 20px;
+    min-width: 250px;
+}
+.producto :hover{
+    background-color: #2e405344;
+}
+.producto img {
+    width: 190px;
+    margin-top: 20px;
+}
+#productos_div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+.cantainer_card {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 10px;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.precio_prod {
+    font-family: sans-serif;
+    font-size: 18px;
+}
+.boton_agregar {
+    background-color: #111f669a;
+    color: rgb(255, 255, 255);
+    width: 85%;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 400;
+    padding: 5px;
+    border: none;
+}
+
+.boton_agregar:hover {
+    cursor: pointer;
+    background-color: #FFC300;
+}
+.boton_agregar:focus {
+    outline: none;
+}
+
+.swal2-popup {
+    font-size: 18px ;
+    font-family: sans-serif;
+    background-color: #000000;
+    color: white;
+}
+
+
+
+.container_modal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(87, 84, 84, 0.542);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
+    font-family: sans-serif;
+}
+
+.modal-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.carrito_modal {
+    position: relative;
+    background-color: #84bbe0;
+    width: 70%;
+    padding: 20px;
+    margin-top: -100%;
+    transition: all .5s;
+    color: rgb(0, 0, 0);
+    opacity: 90%;
+}
+
+.modal-active .carrito_modal {
+    margin-top: 0;
+}
+
+.carrito_modal h3 {
+    color: rgb(230, 230, 230);
+    padding-bottom: 5px;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 40px;
+    
+}
+
+.carrito_modal #carrito_cerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    border: none;
+    background-color: #84bbe0;
+}
+.carrito_modal #carrito_cerrar:hover {
+    cursor: pointer;
+}
+.carrito_modal #carrito_cerrar:focus {
+    outline: none;
+}
+.carrito_modal .precio_p {
+    padding-top: 15px;
+    
+}
+
+.modal_btn_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_btn_div .precio_p {
+    background-color: #ff0000 ;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    
+}
+
+.comprar_btn {
+    background-color: #1e8955;
+    color: rgb(255, 255, 255);
+    width: 60%;
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+.vaciar_btn {
+    background-color: #fa1915;
+    color: rgb(255, 255, 255);
+    width: 60%;
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+.prods_seleccionados {
+    border-bottom: 5px solid rgb(22, 7, 108);;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.btn_eliminar {
+    background-color:  #84bbe0;
+    color: #091929;
+    border: none;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.btn_eliminar:hover {
+    cursor: pointer;
+}
+.btn_eliminar:focus {
+    outline: none;
+}
+
+footer {
+    margin-top: 80px;
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    background-color: #113B66;
+    opacity: 80%;
+}
+
+.footer_text {
+    display: inline-block;
+    justify-content: right;
+    color: #ff6f00;
+    font-size: 25px;
+    font-family: 'Frank Ruhl Libre', serif;
+    text-align: justify;
+    margin: 30px;
+}
+
+/*!
+ * Toastify js 1.12.0
+ * https://github.com/apvarun/toastify-js
+ * @license MIT licensed
+ *
+ * Copyright (C) 2018 Varun A P
+ */
+
+ .toastify {
+    padding: 12px 20px;
+    color: #ffffff;
+    display: inline-block;
+    box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.12), 0 10px 36px -4px rgba(77, 96, 232, 0.3);
+    background: -webkit-linear-gradient(315deg, #73a5ff, #5477f5);
+    background: linear-gradient(135deg, #73a5ff, #5477f5);
+    position: fixed;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    border-radius: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    max-width: calc(50% - 20px);
+    z-index: 2147483647;
+}
+
+.toastify.on {
+    opacity: 1;
+}
+
+.toast-close {
+    background: transparent;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1em;
+    opacity: 0.4;
+    padding: 0 5px;
+}
+
+.toastify-right {
+    right: 15px;
+}
+
+.toastify-left {
+    left: 15px;
+}
+
+.toastify-top {
+    top: -150px;
+}
+
+.toastify-bottom {
+    bottom: -150px;
+}
+
+.toastify-rounded {
+    border-radius: 25px;
+}
+
+.toastify-avatar {
+    width: 1.5em;
+    height: 1.5em;
+    margin: -7px 5px;
+    border-radius: 2px;
+}
+
+.toastify-center {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    max-width: fit-content;
+    max-width: -moz-fit-content;
+}
+
+@media only screen and (max-width: 360px) {
+    .toastify-right, .toastify-left {
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        max-width: fit-content;
+    }
+}
+
+
+/*!
+ * Toastify js 1.12.0
+ * https://github.com/apvarun/toastify-js
+ * @license MIT licensed
+ *
+ * Copyright (C) 2018 Varun A P
+ */
+ .toastify{padding:12px 20px;color:#fff;display:inline-block;box-shadow:0 3px 6px -1px rgba(0,0,0,.12),0 10px 36px -4px rgba(77,96,232,.3);background:-webkit-linear-gradient(315deg,#73a5ff,#5477f5);background:linear-gradient(135deg,#73a5ff,#5477f5);position:fixed;opacity:0;transition:all .4s cubic-bezier(.215, .61, .355, 1);border-radius:2px;cursor:pointer;text-decoration:none;max-width:calc(50% - 20px);z-index:2147483647}
+ .toastify.on{opacity:1}
+ .toast-close{background:0 0;border:0;color:#fff;cursor:pointer;font-family:inherit;font-size:1em;opacity:.4;padding:0 5px}
+ .toastify-right{right:15px}.toastify-left{left:15px}
+ .toastify-top{top:-150px}.toastify-bottom{bottom:-150px}
+ .toastify-rounded{border-radius:25px}
+ .toastify-avatar{width:1.5em;height:1.5em;margin:-7px 5px;border-radius:2px}
+ .toastify-center{margin-left:auto;margin-right:auto;left:0;right:0;max-width:fit-content;max-width:-moz-fit-content}
+ @media only screen and (max-width:360px){.toastify-left,.toastify-right{margin-left:auto;margin-right:auto;left:0;right:0;max-width:fit-content}}
+ 
